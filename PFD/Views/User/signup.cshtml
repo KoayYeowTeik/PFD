@@ -1,0 +1,86 @@
+﻿@model PFD_ASG.Models.AccountViewModel
+
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="alert alert-danger">
+        @TempData["ErrorMessage"]
+    </div>
+}
+
+
+<form asp-action="createUser" asp-controller="User" method="post" enctype="multipart/form-data>
+    <div>
+        <label asp-for="userName">Username</label>
+        <input asp-for="userName" class="form-control" required />
+        <span asp-validation-for="userName" class="text-danger"></span>
+    </div>
+
+    <div>
+        <label asp-for="loginID">Login ID</label>
+        <input asp-for="loginID" class="form-control" required />
+        <span asp-validation-for="loginID" class="text-danger"></span>
+    </div>
+
+    <div>
+        <label asp-for="password"> Password</label>
+        <input asp-for="password" type="password" class="form-control" required />
+        <span asp-validation-for="password" class="text-danger"></span>
+    </div>
+
+    <div>
+        <label asp-for="contactNumber">Contact Number</label>
+        <input asp-for="contactNumber" class="form-control" required />
+        <span asp-validation-for="contactNumber" class="text-danger"></span>
+    </div>
+
+    <div>
+        <label asp-for="dob">Date of Birth</label>
+        <input asp-for="dob" class="form-control" type="date" required />
+        <span asp-validation-for="dob" class="text-danger"></span>
+    </div>
+
+    <div>
+        <label asp-for="cardType">CardType</label>
+        <select asp-for="cardType" class="form-control" required>
+            <option value="">Select CardType</option>
+            <option value="Debit">Debit</option>
+            <option value="Credit">Credit</option>
+        </select>
+        <span asp-validation-for="cardType" class="text-danger"></span>
+    </div>
+
+    <div>
+        <label asp-for="billingAddress">Billing Address</label>
+        <input asp-for="billingAddress" class="form-control" required />
+        <span asp-validation-for="billingAddress" class="text-danger"></span>
+    </div>
+
+    <div>
+        <label asp-for="type">Type of Autism</label>
+        <select asp-for="type" class="form-control" required>
+            <option value="">Select Type of Autism</option>
+            <option value="ASD">ASD - Autism Spectrum Disorder</option>
+            <option value="PDD">PDD - Pervasive Developmental Disorder</option>
+            <option value="Aspergers">Aspergers</option>
+            <option value="RettSyndrome">Rett Syndrome</option>
+            <option value="CDD">CDD - Childhood Disintegrative Disorder</option>
+        </select>
+        <span asp-validation-for="type" class="text-danger"></span>
+    </div>
+
+    <div>
+        <label asp-for="helperID">Helper LoginID</label>
+        <input asp-for="helperID" class="form-control" />
+        <span asp-validation-for="helperID" class="text-danger"></span>
+    </div>
+
+    <div>
+        <label asp-for="helperPassword">Helper Password</label>
+        <input asp-for="helperPassword" class="form-control" />
+        <span asp-validation-for="helperPassword" class="text-danger"></span>
+    </div>
+
+    <div>
+        <button type="submit" class="btn btn-primary">Create Account</button>
+    </div>
+</form>

@@ -1,0 +1,67 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+}
+
+.container .wrapper {
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 50px 0px;
+}
+
+img {
+    width: 38px;
+}
+
+.picture {
+    padding: 14px;
+    background-color: rgba(248,249,250,255);
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+.transHist {
+    border:0;
+}
+.transHistWrapper {
+    max-height: 50vh;
+    overflow-y:auto;
+}
+
+.card {
+    border:none;
+}
+
+select {
+    border: 0; /* or border: none; */
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    outline: none;
+}
+
+/* Styling for the scrollbar track (optional) */
+.transHistWrapper::-webkit-scrollbar, .clFbkEnqRec::-webkit-scrollbar {
+    width: 4px; /* Width of the scrollbar track */
+}
+
+/* Styling for the scrollbar thumb (scrollable area) */
+.transHistWrapper::-webkit-scrollbar-thumb, .clFbkEnqRec::-webkit-scrollbar-thumb {
+    background-color: #888; /* Color of the scrollbar thumb */
+    border-radius: 3px; /* Round the corners of the scrollbar thumb */
+}
+
+    /* Hide the scrollbar when not actively scrolling (optional) */
+    .transHistWrapper::-webkit-scrollbar-thumb:vertical, .clFbkEnqRec::-webkit-scrollbar-thumb {
+        background-color: #bbb; /* Color of the scrollbar thumb when not actively scrolling */
+    }
+
+        /* Hide the scrollbar track when not actively scrolling (optional) */
+        .transHistWrapper::-webkit-scrollbar-thumb:hover, .clFbkEnqRec::-webkit-scrollbar-thumb:hover {
+            background-color: #555; /* Color of the scrollbar thumb on hover */
+        }
+
+/* Hide the scrollbar track when not actively scrolling (optional) */
+.transHistWrapper::-webkit-scrollbar-track, .clFbkEnqRec::-webkit-scrollbar-track {
+    background-color: transparent; /* Hide the scrollbar track */
+}

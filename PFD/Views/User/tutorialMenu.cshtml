@@ -1,0 +1,46 @@
+﻿@model IEnumerable<PFD_ASG.Models.tutorial>
+@{
+    ViewData["Title"] = "Tutorial Menu";
+    var uniqueCat = Model.Select(item => item.tutCat).Distinct();
+}
+@section Stylesheet {
+    <link rel="stylesheet" href="~/css/user/tutorialMenu.css" asp-append-version="true" />
+}
+<main class="p-0 bg-light">
+    <div class="container">
+        <div class="row pageTitle">
+            <h3>@ViewData["Title"]</h3>
+            <p class="opacity-50">Watch & learn tutorial step by step</p>
+        </div>
+
+        <div class="row tutorialMenu mt-4">
+
+            @foreach (var cat in uniqueCat)
+            {
+            <div class="col-lg-6 tutorialCategory">
+                <h5>@cat</h5>
+                <div class="card">
+                    <div class="card-body row">
+                        @foreach (var tut in Model)
+                        {
+                            if (cat == tut.tutCat){
+                            <div class="tutorial col-lg-4 d-flex flex-column justify-content-center align-items-center">
+                                <a asp-action="guide" asp-controller="user">
+                                    <div class="picture">
+                                        <img src="@tut.tutImg" />
+                                    </div>
+                                </a>
+                                <h6 class="tutorial-name">@tut.tutName</h6>
+                            </div>
+                            }
+                        }
+                    </div>
+                </div>
+            </div>
+            }
+
+        </div>
+
+    </div>
+</main>
+

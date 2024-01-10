@@ -1,0 +1,25 @@
+﻿.card .card-body img {
+    width: 38px;
+}
+
+main .container {
+    padding: 50px 0px;
+}
+
+.picture {
+    padding: 28px;
+    background-color: rgba(248,249,250,255);
+    border-radius: 10px;
+}
+
+.card {
+    border: none;
+}
+
+.card-body {
+    padding: 7% 0px;
+}
+
+.tutorial-name {
+    padding-top: 25px;
+}

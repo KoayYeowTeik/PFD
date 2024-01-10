@@ -1,0 +1,67 @@
+﻿<!--TESTING OF THE MICROPHONE FEATURE IN WEB-->
+            <!-- DO NOT TOUCH-->
+
+
+@{
+    ViewData["Title"] = "VoicetoText";
+}
+<style>
+    .speechtotext button {
+        background-color: gray;
+        border-radius: 50%;
+        border: 2px solid gray;
+        padding: 10px;
+        width: 50px;
+        height: 50px;
+    }
+</style>
+<div class= "speechtotext">
+    <button id = "click_to_convert">
+        <i class="fa fa-microphone" aria-hidden="true"></i>
+    </button>
+    <textarea id = "convert_text"></textarea>"
+</div>
+
+<script>
+    const x = document.querySelector("button#click_to_convert"); // finding the elements
+    const y = document.querySelector("textarea#convert_text");
+    let recognition;
+
+    x.addEventListener('click', function () {
+        let speech = true;
+        let isSpeaking = false;
+
+        if (speech) {
+            window.SpeechRecognition = window.webkitSpeechRecognition;
+            recognition = new SpeechRecognition();
+            recognition.interimResults = true;
+
+            recognition.addEventListener('result', e => {
+                const transcript = Array.from(e.results)
+                    .map(result => result[0])
+                    .map(result => result.transcript)
+                    .join(' ');
+                y.innerHTML = transcript;
+
+                const isSpeakingNow = transcript.trim() !== '';
+
+                if (isSpeakingNow) {
+                    isSpeaking = true;
+                }
+            });
+
+            recognition.onend = () => {
+                if (isSpeaking) {
+                    setTimeout(() => {
+                        if (!isSpeaking) {
+                            recognition.stop();
+                        }
+                    }, 3000);
+                }
+            };
+
+            recognition.start();
+        }
+    });
+</script>
+

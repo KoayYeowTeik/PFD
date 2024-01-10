@@ -1,0 +1,209 @@
+﻿.body-container{
+    display:flex;
+    flex-direction: column;
+}
+
+.chart-heading {
+    font-family: "Rubik", sans-serif;
+    color: #023047;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: 700;
+    padding-top:25px;
+    padding-left:50px;
+}
+
+.breakdown-heading {
+    font-weight: 100;
+}
+
+.left-container {
+    padding: 15px;
+}
+
+.amounts-container {
+    display: flex;
+    flex-direction: column;
+    padding-top: 25px;
+    width: 400px;
+}
+
+.food-transport-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.bills-others-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.food-container {
+    display: flex;
+    border-radius: 20px;
+    padding: 5px;
+    align-items: center;
+    flex-direction: column;
+    transition: 0.3s;
+}
+
+    .food-container:hover {
+        transform: scale(1.1);
+        box-shadow: 10px 5px 5px rgba(171,170,171,255);
+        background-color: hotpink;
+    }
+
+        .food-container:hover p {
+            color: white;
+        }
+
+        .food-container:hover h4 {
+            color: white;
+        }
+
+.transport-container {
+    display: flex;
+    border-radius: 20px;
+    padding: 5px;
+    align-items: center;
+    flex-direction: column;
+    transition: 0.3s;
+}
+
+    .transport-container:hover {
+        transform: scale(1.1);
+        box-shadow: 10px 5px 5px rgba(171,170,171,255);
+        background-color: forestgreen;
+    }
+
+        .transport-container:hover p {
+            color: white;
+        }
+
+        .transport-container:hover h4 {
+            color: white;
+        }
+
+.bills-container {
+    display: flex;
+    border-radius: 20px;
+    padding: 5px;
+    align-items: center;
+    flex-direction: column;
+    transition: 0.3s;
+}
+
+    .bills-container:hover {
+        transform: scale(1.1);
+        box-shadow: 10px 5px 5px rgba(171,170,171,255);
+        background-color: darkorange;
+    }
+
+        .bills-container:hover p {
+            color: white;
+        }
+
+        .bills-container:hover h4 {
+            color: white;
+        }
+
+.transfers-container {
+    display: flex;
+    border-radius: 20px;
+    padding: 5px;
+    align-items: center;
+    flex-direction: column;
+    transition: 0.3s;
+}
+
+    .transfers-container:hover {
+        transform: scale(1.1);
+        box-shadow: 10px 5px 5px rgba(171,170,171,255);
+        background-color: grey;
+    }
+
+        .transfers-container:hover p {
+            color: white;
+        }
+
+        .transfers-container:hover h4 {
+            color: white;
+        }
+
+.dot-n-amt-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 10px;
+    width: 120px;
+}
+
+.food-dot {
+    height: 25px;
+    width: 25px;
+    background-color: rgba(245,112,255,255);
+    border-radius: 50%;
+}
+
+.transport-dot {
+    height: 25px;
+    width: 25px;
+    background-color: rgba(61,156,7,255);
+    border-radius: 50%;
+}
+
+.bills-dot {
+    height: 25px;
+    width: 25px;
+    background-color: rgba(242,160,19,255);
+    border-radius: 50%;
+}
+
+.transfers-dot {
+    height: 25px;
+    width: 25px;
+    background-color: rgba(171,170,171,255);
+    border-radius: 50%;
+}
+
+.chart-container {
+    width: 300px;
+    padding: 20px;
+    text-align: right;
+    padding: 8px;
+    padding-top: 30px;
+}
+
+.spending-insights {
+    font-family: "Rubik", sans-serif;
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    margin: 0 auto;
+    padding: 30px;
+    width: 900px;
+    border-radius: 20px;
+    color: #023047;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: #e9e9e9;
+}
+
+    .spending-insights.details ul {
+        list-style: none;
+        padding: 0;
+    }
+
+        .spending-insights.details ul li {
+            font-size: 16px;
+            margin: 12px 0;
+            text-transform: uppercase;
+        }
+
+    .spending-insights.details.percentage {
+        font-weight: 700;
+        color: #e63946;
+    }

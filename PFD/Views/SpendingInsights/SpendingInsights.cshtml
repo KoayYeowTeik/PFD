@@ -1,0 +1,188 @@
+﻿@using PFD_ASG.Models;
+@using System.Text.Json;
+
+@{
+    List<TransactionView> transactionFood = ViewData["transactionFood"] as List<TransactionView>;
+    List<TransactionView> transactionTransport = ViewData["transactionTransport"] as List<TransactionView>;
+    List<TransactionView> transactionBills = ViewData["transactionBills"] as List<TransactionView>;
+    List<TransactionView> transactionTransfers = ViewData["transactionTransfers"] as List<TransactionView>;
+
+}
+<head>
+    @section Stylesheet{
+        <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="~/css/spendStyle.css" asp-append-version="true">
+    }
+
+</head>
+
+
+<body>
+    <div class="body-container">
+        <h2 class="chart-heading">Spending Insights</h2>
+
+        <div class="spending-insights">
+            <div class="left-container">
+                <h3 class="breakdown-heading">Breakdown</h3>
+                <div class="amounts-container">
+                    <div class="amounts">
+                        <div class="food-transport-container">
+                            <div class="food-container">
+                                <div class="dot-n-amt-container">
+                                    <span class="food-dot"></span>
+                                    <h4>$0</h4>
+                                </div>
+                                <p>Food</p>
+                            </div>
+                            <div class="transport-container">
+                                <div class="dot-n-amt-container">
+                                    <span class="transport-dot"></span>
+                                    <h4>$0</h4>
+                                </div>
+                                <p>Transport</p>
+                            </div>
+                        </div>
+
+                        <div class="bills-others-container">
+                            <div class="bills-container">
+                                <div class="dot-n-amt-container">
+                                    <span class="bills-dot"></span>
+                                    <h4>$0</h4>
+                                </div>
+                                <p>Bills</p>
+                            </div>
+                            <div class="transfers-container">
+                                <div class="dot-n-amt-container">
+                                    <span class="transfers-dot"></span>
+                                    <h4>$0</h4>
+                                </div>
+                                <p>Transfers</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="chart-container">
+                <canvas class="chart"></canvas>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script>
+
+            $(document).ready(function () {
+                var transactionFood = [];
+                var transactionTransport = [];
+                var transactionBills = [];
+                var transactionTransfers = [];
+                var totalSpent = 0;
+
+                function sum(list) {
+                    let sum = 0;
+                    for (let i = 0; i < list.length; i++) {
+                        sum += list[i].amount;
+                    }
+                    return sum;
+                }
+
+                $.ajax({
+                    url: '/spendingInsights/insightsCalculation',
+                    method: 'GET',
+                    async: false,
+                    success: function (data) {
+                        console.log("server response:", data)
+                        totalSpent = data.transactionTotal;
+                        transactionFood = data.transactionFood;
+                        transactionTransport = data.transactionTransport;
+                        transactionBills = data.transactionBills;
+                        transactionTransfers = data.transactionTransfers;
+                    }
+                });
+
+                const dailyLimit = 1000;
+
+                let foodTotal = sum(transactionFood);
+                let transportTotal = sum(transactionTransport);
+                let billsTotal = sum(transactionBills);
+                let transfersTotal = sum(transactionTransfers);
+
+
+                const chartData = {
+                    labels: ["Food", "Transport", "Bills", "Transfers", "Amount Left"],
+                    data: [foodTotal, transportTotal, billsTotal, transfersTotal, dailyLimit - totalSpent],
+                };
+
+                const chart = document.querySelector(".chart");
+                const ul = document.querySelector("div .spending-insights .details ul")
+
+                const doughnutLabel = {
+                    id: 'doughnutLabel',
+                    beforeDatasetsDraw(chart, args, pluginOptions) {
+                        const { ctx, data } = chart;
+
+                        ctx.save();
+                        const xCoor = chart.getDatasetMeta(0).data[0].x;
+                        const yCoor = chart.getDatasetMeta(0).data[0].y;
+                        ctx.font = 'bold 20px sans-serif';
+                        ctx.fillStyle = 'rgba(112,112,112,255)';
+                        ctx.textAlign = 'center';
+                        ctx.textBaseline = 'middle';
+                        ctx.fillText(`$${totalSpent} / $${dailyLimit}`, xCoor, yCoor);
+                    }
+                }
+
+                new Chart(chart, {
+                    type: "doughnut",
+                    data: {
+                        labels: chartData.labels,
+                        datasets: [
+                            {
+                                label: "Amount ($)",
+                                data: chartData.data,
+                                backgroundColor: [
+                                    'rgba(245, 112, 255, 255)',
+                                    'rgba(61, 156, 7, 255)',
+                                    'rgba(242, 160, 19, 255)',
+                                    'rgba(171,170,171,255)',
+                                    'rgba(223,223,223,255)'
+                                ],
+                                borderColor: [
+                                    'rgba(245, 112, 255, 255)',
+                                    'rgba(61, 156, 7, 255)',
+                                    'rgba(242, 160, 19, 255)',
+                                    'rgba(171,170,171,255)',
+                                    'rgba(223,223,223,255)'
+                                ],
+                                borderWidth: 2,
+                                cutout: '90%',
+                                borderRadius: 10
+                            },
+                        ],
+                    },
+                    options: {
+                        borderWidth: 10,
+                        plugins: {
+                            legend: {
+                                display: false,
+                            }
+                        }
+                    },
+                    plugins: [doughnutLabel]
+                });
+
+                var divTransfers = document.querySelector('.food-container');
+                divTransfers.querySelector('h4').innerText = '$' + foodTotal.toString();
+
+                var divTransport = document.querySelector('.transport-container');
+                divTransport.querySelector('h4').innerText = '$' + transportTotal.toString();
+
+                var divBills = document.querySelector('.bills-container');
+                divBills.querySelector('h4').innerText = '$' + billsTotal.toString();
+
+                var divTransfers = document.querySelector('.transfers-container');
+                divTransfers.querySelector('h4').innerText = '$' + transfersTotal.toString();
+            })
+        </script>
+    </div>
+</body>

@@ -1,0 +1,73 @@
+﻿main {
+    /* Linear Gradient from top to bottom */
+    background: linear-gradient(to bottom, #7A70AD, #597EB4);
+}
+
+main .container {
+    padding: 100px 0px;
+}
+
+main img {
+    width: 600px;
+    border-radius: 15px;
+}
+
+.embed-responsive, .content {
+    max-width: 600px;
+    margin-bottom: 25px;
+}
+
+main video {
+    width: 100%;
+    border-radius: 15px;
+}
+
+main .card {
+    border-radius: 10px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.content h3,
+.content p,
+.content img {
+    margin-bottom: 15px; /* Add a bottom margin to each element */
+}
+
+.card-header p {
+    margin-top: 1rem;
+    margin-right: 1rem;
+}
+
+main .card-body {
+    padding: 60px 0px;
+    margin: auto;
+}
+
+.content {
+    margin-top: 25px;
+}
+
+#completeTut {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+    #completeTut img {
+        width: 150px;
+        margin: auto;
+    }
+
+    #completeTut h3, #completeTut img {
+        margin-bottom: 50px
+    }
+
+    #completeTut .btn {
+        width: 50%;
+        margin: auto;
+    }
+
+    #completeTut a {
+        text-align: center;
+    }

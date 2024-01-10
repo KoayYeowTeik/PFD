@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+</head>
+<body>
+    @if (TempData["ErrorMessage"] != null)
+    {
+        <div class="alert alert-danger">
+            @TempData["ErrorMessage"]
+        </div>
+    }
+    <h2>Login</h2>
+    <form asp-controller="User" asp-action="authenticate" method="post">
+        <label for="LoginID">Login ID:</label>
+        <input type="text" id="LoginID" name="LoginID" required>
+
+        <label for="Password">Password:</label>
+        <input type="Password" id="Password" name="Password" required>
+
+        <input type="submit" value="Login">
+    </form>
+    <button id="loginWithFaceBtn">Login with face</button>
+    <button onclick="location.href='@Url.Action("signup", "User")'">sign up</button>
+
+</body>
+<script>
+      document.addEventListener('DOMContentLoaded', function () {
+        // Attach a click event handler to the button
+        document.getElementById('loginWithFaceBtn').addEventListener('click', function () {
+            // Create a new XMLHttpRequest object
+            var xhr = new XMLHttpRequest();
+
+            // Configure the request
+            xhr.open('POST', '/YourController/LoginWithFace', true); // Adjust the URL and method accordingly
+            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+
+            // Set up the callback for a successful response
+            xhr.onload = function () {
+                if (xhr.status >= 200 && xhr.status < 300) {
+                    // Successful response
+                    var responseData = JSON.parse(xhr.responseText);
+                    console.log('Login with face successful:', responseData);
+                } else {
+                    // Error response
+                    console.error('Error during login with face:', xhr.statusText);
+                }
+            };
+
+            // Set up the callback for network errors
+            xhr.onerror = function () {
+                console.error('Network error during login with face');
+            };
+
+            // Send the request (you can include data in the send method if needed)
+            xhr.send();
+
+            // Prevent the default form submission behavior
+            return false;
+        });
+    });
+</script>
+</html>

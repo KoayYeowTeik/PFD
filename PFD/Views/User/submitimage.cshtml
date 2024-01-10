@@ -1,0 +1,71 @@
+﻿<h2>Capture and Submit Photo</h2>
+
+<div id="camera">
+    <video id="video" autoplay></video>
+    <button id="capture">Capture</button>
+</div>
+
+<canvas id="canvas" style="display: none;"></canvas>
+
+<button id="submit" style="display: none;">Submit</button>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function () {
+        const video = document.getElementById('video');
+        const canvas = document.getElementById('canvas');
+        const captureButton = document.getElementById('capture');
+        const submitButton = document.getElementById('submit');
+        const context = canvas.getContext('2d');
+        // Access the user's camera
+        navigator.mediaDevices.getUserMedia({ video: true })
+            .then(function (stream) {
+                video.srcObject = stream;
+            })
+            .catch(function (error) {
+                console.error('Error accessing the camera: ', error);
+            });
+
+        // Capture a photo from the video feed
+        document.getElementById("capture").addEventListener('click', function () {
+            canvas.width = 960;
+            canvas.height = 720;
+            context.drawImage(video, 0, 0, canvas.width, canvas.height);
+            submitButton.style.display = 'block';
+        });
+
+        // Send the captured photo to the controller via AJAX
+        document.getElementById("submit").addEventListener('click', function () {
+            const imageData = canvas.toDataURL('image/jpeg');
+            // remove the prefix and get the base64-encoded string
+            const base64String = imageData.substring(imageData.indexOf(',') + 1);
+
+            // decode the base64-encoded string to a binary string
+            const binaryString = atob(base64String);
+
+            // create a typed array of 8-bit unsigned integers from the binary string
+            const byteArray = new Uint8Array(binaryString.length);
+            for (let i = 0; i < binaryString.length; i++) {
+                byteArray[i] = binaryString.charCodeAt(i);
+            }
+
+            var img = document.createElement("img");
+            img.src = imageData;
+            //document.body.appendChild(img);
+
+            $.ajax({
+                type: 'POST',
+                contentType: 'application/json',
+                url: '/User/submitimage',
+                data: JSON.stringify(btoa(String.fromCharCode.apply(null, byteArray))),
+                dataType: "json",
+                success: function () {
+                    console.log("Success")
+                },
+                error: function () {
+                    window.location.href = '/User/login'
+                    console.log("Error")
+                }
+            });
+        });
+    });
+</script>

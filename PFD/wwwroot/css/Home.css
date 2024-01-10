@@ -1,0 +1,189 @@
+﻿/*First Box*/
+.header-container {
+    position: relative;
+    /* Set the background image */
+    background-image: url('https://www.ocbc.com/iwov-resources/sg/ocbc/personal/img/live/personalisation/banca/banner1-v3.jpg');
+    /* Adjust the background properties */
+    background-size: cover;
+    background-position: center; /* Shifting the image to the right */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    height: 65vh; /* Adjust the height of the banner */
+    width: 100%;
+    /* You can add more styles (text, overlay, etc.) within the banner div */
+    padding: 50px; /* Padding for content within the banner */
+    display: grid;
+    grid-template-columns: 40% 60%;
+    gap: 5rem;
+    align-items: center;
+}
+
+.left-header{
+    margin-left:30px;
+    position: relative;
+}
+
+.left-header h1 {
+    font-family: 'Geomanist',Helvetica,Arial,sans-serif;
+    font-size: 60px;
+    line-height: 1.21;
+    font-weight: 300;
+    color: #363B40;
+    padding-left: 20px;
+
+}
+
+.left-header p {
+    font-size:19px;
+    line-height: 1.9;
+    margin: 1rem 3rem 10rem 1rem;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    color: #424242;
+}
+
+
+
+
+/*reward box*/
+.reward {
+    position: relative;
+    height: 70vh;
+    margin-bottom: 5rem;
+}
+
+.reward-container {
+    /* Set the background image */
+    background-image: url('https://www.ocbc.com/iwov-resources/sg/ocbc/personal/img/live/home/banner2-desktop-christmas23.jpg');
+    /* Adjust the background properties */
+    background-size: cover;
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-position: left -50px center; /* Moves the image 20px more to the right */
+    height: 75%; /* Adjust the height of the banner */
+    width: 100%;
+    /* You can add more styles (text, overlay, etc.) within the banner div */
+    padding: 50px; /* Padding for content within the banner */
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+}
+
+.right-reward{
+    grid-column: 2 !important;
+}
+
+.right-reward p {   
+    line-height: 30px;
+    color: #424242;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    grid-column: 2 !important; 
+    margin-left: 30px;
+}
+
+.right-reward h1 {
+    grid-column: 2 !important; 
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, san-sans-serif;
+    line-height: 1.7;
+    color: #424242;
+    padding: 30px;
+}
+
+/*tax box*/
+.Tax {
+    height:56vh;
+}
+
+.Tax-container {
+    /* Set the background image */
+    background-image: url('https://www.ocbc.com/iwov-resources/sg/ocbc/personal/img/live/home/banner3-globalblue-d.jpg');
+    /* Adjust the background properties */
+    background-size: cover;
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-position: right -225px center; /* Moves the image 20px more to the right */
+    height: 100%; /* Adjust the height of the banner */
+    width: 100%;
+    /* You can add more styles (text, overlay, etc.) within the banner div */
+    padding: 50px; /* Padding for content within the banner */
+    margin-top: -26vh; /* Adjust the value as needed */
+    display: grid;
+    grid-template-columns: 33% 67%;
+    gap: 5rem;
+    align-items: center;
+}
+
+.Enjoy h3{
+    font-size:20px;
+    margin-bottom: 60px;
+    margin-top:-30px;
+    padding-left:25px;
+}
+
+.left-Tax h1 {
+    font-weight: bold;
+    font-family: 'Verdana', Geneva, Tahoma, san-sans-serif;
+    font-size: 33px;
+    line-height: 50px;
+    color: #363B40;
+    padding-left: 20px;
+}
+
+.left-Tax p {
+    line-height: 30px;
+    color: #424242;
+    position: relative;
+    font-size: 16px;
+    margin: 1rem 3rem 10rem 1rem;
+    margin-left: 25px;
+    margin-bottom: 20px;
+}
+
+
+
+
+    
+/*button*/
+.button-28 {
+    font-family: 'OpenSans',Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: normal;
+    text-align: center;
+    background-color: transparent;
+    border: 2px solid #363B40;
+    border-radius: 5px;
+    display: inline-block;
+    height: auto;
+    line-height: 46px;
+    overflow: hidden;
+    align-items: center;
+    width: 170px;
+    height: 55px;
+    -webkit-transition: all .2s ease-in-out, color 0s linear, background-color 0s linear;
+    -o-transition: all .2s ease-in-out, color 0s linear, background-color 0s linear;
+    transition: all .2s ease-in-out, color 0s linear, background-color 0s linear;
+    margin-left: 30px;
+    position: relative;
+    margin-bottom: 30px;
+    margin-top: -10px;
+
+}
+
+
+.button-28:disabled {
+    pointer-events: none;
+}
+
+.button-28:hover {
+    color: #ffffff;
+    background-color: #363B40;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+}
+
+.button-28:active {
+    box-shadow: none;
+    transform: translateY(0);
+}

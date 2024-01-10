@@ -1,0 +1,123 @@
+﻿@using PFD_ASG.Controllers
+@using Microsoft.AspNetCore.Http
+
+@{
+    bool check = UserController.checkLoggedIn(Context);
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - PFD_ASG</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/PFD_ASG.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--FontAwesome 6.2.0 (Liwei)-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+    @RenderSection("Stylesheet", required: false)
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow">
+            <div class="container">
+                <a class="navbar-brand" asp-action="index" asp-controller="user">
+                    <img src="https://www.ocbc.com/iwov-resources/sg/ocbc/gbc/img/logo_ocbc.png" style="width:15%" />
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        @{
+                            if(check)
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="index">Home</a>
+                                </li>
+                            }
+                            else
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="">Home</a>
+                                </li>
+                            }
+
+                        }
+                        
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
+                        </li>
+                        
+                        @{
+                            if (check)
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="Logout">Logout</a>
+                                </li>
+                            }
+
+                            else
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="login">Login</a>
+                                </li>
+                            }
+                        }
+                        
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div>
+        <!--Chatbot section-->
+        <div class="chatbotSection">
+            <div class="card">
+                <h5 class="card-header">Chatbot</h5>
+                <div class="card-body">
+                    <div class="messageSection">
+                        <div class="message mb-4">
+                            <img src="https://cdn-icons-png.flaticon.com/512/11306/11306080.png" id="profileImg" />
+                            <p class="msg">Hello!</p>
+                        </div>
+                    </div>
+                    <div class="form-inline d-flex">
+                        <div class="form-group">
+                            <textarea class="form-control" id="textData" rows="3" placeholder="Enter message..."></textarea>
+                        </div>
+                        <div class="chatbotBtn d-flex flex-column ms-2">
+                            <button class="btn btn-success mb-2" id="microphoneBtn">
+                                <i class="fa-solid fa-microphone"></i>
+                            </button>
+                            <button class="btn btn-primary mb-2" id="sendMsgBtn">
+                                <i class="fa-solid fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Chatbot button-->
+        <div class="chatbot">
+            <img src="https://cdn-icons-png.flaticon.com/512/11306/11306080.png" id="chatbotImg" />
+        </div>
+        @RenderBody()
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="footer container">
+            @await Html.PartialAsync("_Footer.cshtml")
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

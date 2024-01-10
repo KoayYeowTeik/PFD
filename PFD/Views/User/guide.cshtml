@@ -1,0 +1,132 @@
+﻿@model List<guide>
+@{
+    ViewData["Title"] = "TUTORIAL GUIDE NAME";
+}
+
+@section Stylesheet {
+    <link rel="stylesheet" href="~/css/user/guide.css" asp-append-version="true" />
+}
+
+    <main class="p-0">
+        <div class="container">
+            <div class="card">
+                <div class="card-header d-flex align-items-center">
+                    <p class="opacity-50" id="currentStep">1/4</p>
+                    <div class="progress" style="height: 20px; width:30%">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <button type="button" class="btn btn-link ms-auto">
+                        <a asp-action="tutorialMenu" asp-controller="user">Exit</a>
+                    </button>
+                </div>
+                <div class="card-body">
+                    <div id="content">
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <video class="embed-responsive-item" controls>
+                            <source id="videoSource" src="~\C:\Users\koayy\Videos\Captures\step1.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div>
+                            <h4 id="stepNum"></h4>
+                            <p id="textcontent"></p>
+                            <img id="contentImg" src="" />
+                            <div class="mt-5 d-flex justify-content-between">
+                                <button type="button" class="btn btn-secondary btn-lg" id="back">Back</button>
+                                <button type="button" class="btn btn-primary btn-lg ms-auto" id="next">Next</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Complete tutorial-->
+                    <div id="completeTut">
+                        <img src="https://cdn-icons-png.flaticon.com/512/190/190411.png">
+                        <h3>You have complete your tutorial on set spending limit</h3>
+                        <button type="button" class="btn btn-info btn-lg mb-4" id="rewatch">Rewatch</button>
+                        <a asp-action="tutorialMenu" asp-controller="user">
+                            <button type="button" class="btn btn-warning btn-lg" id="exit">Exit</button>
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    @section Scripts{
+    <script>
+        $(document).ready(function () {
+
+            // current Step num
+            var currentStepNum = 1
+            var tutID = 3
+            //Load tutorial content
+            ShowContent()
+            //Hide some elements for 1st page
+            $("#back").hide();
+            $("#completeTut").hide();
+            $("#content").show();
+
+            // When next step is clicked
+            $("#next").click(function () {
+                currentStepNum += 1
+                ShowContent()
+                if (currentStepNum > 1) {
+                    $("#back").show();
+                }
+            });
+
+            // When back step is clicked
+            $("#back").click(function () {
+                currentStepNum -= 1
+                ShowContent()
+                if (currentStepNum <= 1) {
+                    $("#back").hide();
+                }
+            });
+
+            // When rewatch button is clicked
+            $("#rewatch").click(function () {
+                currentStepNum = 1
+                ShowContent()
+                $("#back").hide();
+                $("#completeTut").hide();
+                $("#content").show();
+            });
+
+            function ShowContent() {
+                $.ajax({
+                    url: '@Url.Action("GetData", "User")',
+                    type: 'POST',
+                    dataType: 'json',
+                    data: { tutID: tutID },
+                    success: function (data) {
+                        $.each(data, function (index, item) {
+                            if (item.stepNum == currentStepNum) {
+                                // UDPATE THE CONTENT!
+                                $("#currentStep").text(currentStepNum + "/" + data.length);
+                                $(".progress-bar").attr("aria-valuenow", currentStepNum);
+                                $(".progress-bar").attr("aria-valuemax", data.length);
+                                var newWidth = (currentStepNum / data.length) * 100;
+                                $(".progress-bar").css("width", newWidth + '%');
+                                $("#videoSource").attr("src", "/tutorialVideo/Spending Limit/" + item.video + ".mp4");
+                                $("video")[0].load();
+                                $("#stepNum").text("Step " + item.stepNum)
+                                $("#textcontent").text(item.textContent)
+                                $("#contentImg").attr("src", "/tutorialImg/Spending Limit/step" + item.stepNum + ".png");
+                            }
+                        });
+                        //When no more steps is found
+                        if (data.length < currentStepNum) {
+                            $("#completeTut").show();
+                            $("#content").hide();
+                        }
+                    },
+                    error: function (xhr, status, error) {
+                        alert("error");
+                    }
+                });
+            }
+
+        });
+    </script>
+}

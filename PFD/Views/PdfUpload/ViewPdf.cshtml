@@ -1,0 +1,6 @@
+﻿<div id="pdfContainer"></div>
+@{
+Html.ActionLink("View PDF", "DisplayPdf", new { pdfData = ViewData["pdfData"] }, new { target = "_blank" });
+}
+<script src="https://mozilla.github.io/pdf.js/build/pdf.js"></script>
+<script src="ViewPdf.js"></script>
