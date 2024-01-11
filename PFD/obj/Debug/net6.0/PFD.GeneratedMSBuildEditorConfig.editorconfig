@@ -60,16 +60,8 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3BlbmRpbmdJbnNpZ2h0c1xTcGVuZGluZ0luc2lnaHRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/koayy/source/repos/PFD/PFD/Views/TestVoice/TextInterpreter.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVzdFZvaWNlXFRleHRJbnRlcnByZXRlci5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/koayy/source/repos/PFD/PFD/Views/TestVoice/TexttoSpeech.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVzdFZvaWNlXFRleHR0b1NwZWVjaC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/koayy/source/repos/PFD/PFD/Views/TestVoice/VoicetoText.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVzdFZvaWNlXFZvaWNldG9UZXh0LmNzaHRtbA==
+[C:/Users/koayy/source/repos/PFD/PFD/Views/Tests/EmotionDetection.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVzdHNcRW1vdGlvbkRldGVjdGlvbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/koayy/source/repos/PFD/PFD/Views/User/guide.cshtml]
