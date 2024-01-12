@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "rBGgkuIQba++vosUceez16y5gTwKcJumPwkPpXywOv4=",
+  "Hash": "vDeaK7sXGdUrS9RVks1cfCU6vgrMHDxEjYkDm3HwmN4=",
   "Source": "PFD",
   "BasePath": "_content/PFD",
   "Mode": "Default",
@@ -253,6 +253,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\tests.js"
+    },
+    {
+      "Identity": "C:\\Users\\koayy\\source\\repos\\PFD\\PFD\\wwwroot\\js\\tests2.js",
+      "SourceId": "PFD",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\koayy\\source\\repos\\PFD\\PFD\\wwwroot\\",
+      "BasePath": "_content/PFD",
+      "RelativePath": "js/tests2.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\tests2.js"
     },
     {
       "Identity": "C:\\Users\\koayy\\source\\repos\\PFD\\PFD\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
@@ -1224,23 +1241,6 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Identity": "C:\\Users\\koayy\\source\\repos\\PFD\\PFD\\wwwroot\\models\\face_expression_model-shard1",
-      "SourceId": "PFD",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\koayy\\source\\repos\\PFD\\PFD\\wwwroot\\",
-      "BasePath": "_content/PFD",
-      "RelativePath": "models/face_expression_model-shard1",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\models\\face_expression_model-shard1"
-    },
-    {
       "Identity": "C:\\Users\\koayy\\source\\repos\\PFD\\PFD\\wwwroot\\models\\face_expression_model-shard1.bin",
       "SourceId": "PFD",
       "SourceType": "Discovered",
@@ -1273,23 +1273,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\models\\face_expression_model-weights_manifest.json"
-    },
-    {
-      "Identity": "C:\\Users\\koayy\\source\\repos\\PFD\\PFD\\wwwroot\\models\\face_landmark_68_model-shard1",
-      "SourceId": "PFD",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\koayy\\source\\repos\\PFD\\PFD\\wwwroot\\",
-      "BasePath": "_content/PFD",
-      "RelativePath": "models/face_landmark_68_model-shard1",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\models\\face_landmark_68_model-shard1"
     },
     {
       "Identity": "C:\\Users\\koayy\\source\\repos\\PFD\\PFD\\wwwroot\\models\\face_landmark_68_model-shard1.bin",
@@ -1326,23 +1309,6 @@
       "OriginalItemSpec": "wwwroot\\models\\face_landmark_68_model-weights_manifest.json"
     },
     {
-      "Identity": "C:\\Users\\koayy\\source\\repos\\PFD\\PFD\\wwwroot\\models\\face_landmark_68_tiny_model-shard1",
-      "SourceId": "PFD",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\koayy\\source\\repos\\PFD\\PFD\\wwwroot\\",
-      "BasePath": "_content/PFD",
-      "RelativePath": "models/face_landmark_68_tiny_model-shard1",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\models\\face_landmark_68_tiny_model-shard1"
-    },
-    {
       "Identity": "C:\\Users\\koayy\\source\\repos\\PFD\\PFD\\wwwroot\\models\\face_landmark_68_tiny_model-shard1.bin",
       "SourceId": "PFD",
       "SourceType": "Discovered",
@@ -1377,23 +1343,6 @@
       "OriginalItemSpec": "wwwroot\\models\\face_landmark_68_tiny_model-weights_manifest.json"
     },
     {
-      "Identity": "C:\\Users\\koayy\\source\\repos\\PFD\\PFD\\wwwroot\\models\\face_recognition_model-shard1",
-      "SourceId": "PFD",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\koayy\\source\\repos\\PFD\\PFD\\wwwroot\\",
-      "BasePath": "_content/PFD",
-      "RelativePath": "models/face_recognition_model-shard1",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\models\\face_recognition_model-shard1"
-    },
-    {
       "Identity": "C:\\Users\\koayy\\source\\repos\\PFD\\PFD\\wwwroot\\models\\face_recognition_model-shard1.bin",
       "SourceId": "PFD",
       "SourceType": "Discovered",
@@ -1409,23 +1358,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\models\\face_recognition_model-shard1.bin"
-    },
-    {
-      "Identity": "C:\\Users\\koayy\\source\\repos\\PFD\\PFD\\wwwroot\\models\\face_recognition_model-shard2",
-      "SourceId": "PFD",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\koayy\\source\\repos\\PFD\\PFD\\wwwroot\\",
-      "BasePath": "_content/PFD",
-      "RelativePath": "models/face_recognition_model-shard2",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\models\\face_recognition_model-shard2"
     },
     {
       "Identity": "C:\\Users\\koayy\\source\\repos\\PFD\\PFD\\wwwroot\\models\\face_recognition_model-shard2.bin",
@@ -1460,23 +1392,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\models\\face_recognition_model-weights_manifest.json"
-    },
-    {
-      "Identity": "C:\\Users\\koayy\\source\\repos\\PFD\\PFD\\wwwroot\\models\\tiny_face_detector_model-shard1",
-      "SourceId": "PFD",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\koayy\\source\\repos\\PFD\\PFD\\wwwroot\\",
-      "BasePath": "_content/PFD",
-      "RelativePath": "models/tiny_face_detector_model-shard1",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\models\\tiny_face_detector_model-shard1"
     },
     {
       "Identity": "C:\\Users\\koayy\\source\\repos\\PFD\\PFD\\wwwroot\\models\\tiny_face_detector_model-shard1.bin",

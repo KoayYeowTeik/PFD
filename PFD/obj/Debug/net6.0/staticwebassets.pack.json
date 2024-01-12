@@ -53,6 +53,10 @@
       "PackagePath": "staticwebassets\\js\\tests.js"
     },
     {
+      "Id": "C:\\Users\\koayy\\source\\repos\\PFD\\PFD\\wwwroot\\js\\tests2.js",
+      "PackagePath": "staticwebassets\\js\\tests2.js"
+    },
+    {
       "Id": "C:\\Users\\koayy\\source\\repos\\PFD\\PFD\\wwwroot\\lib\\bootstrap\\LICENSE",
       "PackagePath": "staticwebassets\\lib\\bootstrap"
     },
@@ -281,20 +285,12 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-      "Id": "C:\\Users\\koayy\\source\\repos\\PFD\\PFD\\wwwroot\\models\\face_expression_model-shard1",
-      "PackagePath": "staticwebassets\\models"
-    },
-    {
       "Id": "C:\\Users\\koayy\\source\\repos\\PFD\\PFD\\wwwroot\\models\\face_expression_model-shard1.bin",
       "PackagePath": "staticwebassets\\models\\face_expression_model-shard1.bin"
     },
     {
       "Id": "C:\\Users\\koayy\\source\\repos\\PFD\\PFD\\wwwroot\\models\\face_expression_model-weights_manifest.json",
       "PackagePath": "staticwebassets\\models\\face_expression_model-weights_manifest.json"
-    },
-    {
-      "Id": "C:\\Users\\koayy\\source\\repos\\PFD\\PFD\\wwwroot\\models\\face_landmark_68_model-shard1",
-      "PackagePath": "staticwebassets\\models"
     },
     {
       "Id": "C:\\Users\\koayy\\source\\repos\\PFD\\PFD\\wwwroot\\models\\face_landmark_68_model-shard1.bin",
@@ -305,10 +301,6 @@
       "PackagePath": "staticwebassets\\models\\face_landmark_68_model-weights_manifest.json"
     },
     {
-      "Id": "C:\\Users\\koayy\\source\\repos\\PFD\\PFD\\wwwroot\\models\\face_landmark_68_tiny_model-shard1",
-      "PackagePath": "staticwebassets\\models"
-    },
-    {
       "Id": "C:\\Users\\koayy\\source\\repos\\PFD\\PFD\\wwwroot\\models\\face_landmark_68_tiny_model-shard1.bin",
       "PackagePath": "staticwebassets\\models\\face_landmark_68_tiny_model-shard1.bin"
     },
@@ -317,16 +309,8 @@
       "PackagePath": "staticwebassets\\models\\face_landmark_68_tiny_model-weights_manifest.json"
     },
     {
-      "Id": "C:\\Users\\koayy\\source\\repos\\PFD\\PFD\\wwwroot\\models\\face_recognition_model-shard1",
-      "PackagePath": "staticwebassets\\models"
-    },
-    {
       "Id": "C:\\Users\\koayy\\source\\repos\\PFD\\PFD\\wwwroot\\models\\face_recognition_model-shard1.bin",
       "PackagePath": "staticwebassets\\models\\face_recognition_model-shard1.bin"
-    },
-    {
-      "Id": "C:\\Users\\koayy\\source\\repos\\PFD\\PFD\\wwwroot\\models\\face_recognition_model-shard2",
-      "PackagePath": "staticwebassets\\models"
     },
     {
       "Id": "C:\\Users\\koayy\\source\\repos\\PFD\\PFD\\wwwroot\\models\\face_recognition_model-shard2.bin",
@@ -335,10 +319,6 @@
     {
       "Id": "C:\\Users\\koayy\\source\\repos\\PFD\\PFD\\wwwroot\\models\\face_recognition_model-weights_manifest.json",
       "PackagePath": "staticwebassets\\models\\face_recognition_model-weights_manifest.json"
-    },
-    {
-      "Id": "C:\\Users\\koayy\\source\\repos\\PFD\\PFD\\wwwroot\\models\\tiny_face_detector_model-shard1",
-      "PackagePath": "staticwebassets\\models"
     },
     {
       "Id": "C:\\Users\\koayy\\source\\repos\\PFD\\PFD\\wwwroot\\models\\tiny_face_detector_model-shard1.bin",
