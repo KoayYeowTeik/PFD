@@ -122,7 +122,6 @@ function uploadImageToFirebase(blob) {
     const storageRef = storage.ref().child("myimages");
     const fileName = Math.round(Math.random() * 9999) + '.png';
     const folderRef = storageRef.child(fileName);
-
     const uploadTask = folderRef.put(blob);
 
     uploadTask.on(
