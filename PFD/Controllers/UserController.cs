@@ -220,6 +220,50 @@ namespace PFD_ASG.Controllers
         {
             return View();
         }
+
+        public ActionResult transfer()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult transfer(string accountNumber, decimal amount)
+        {
+            try
+            {
+                if (string.IsNullOrEmpty(accountNumber) || amount <= 0)
+                {
+                    return View();
+                }
+
+                int userID = (int)HttpContext.Session.GetInt32("UserID");
+
+                bool checkAccount = usersDAL.AddMoney(accountNumber, amount);
+                if(!checkAccount)
+                {
+                    TempData["ErrorMessage"] = "User account cannot be found";
+                    return View();
+                }
+                bool checkBalance = usersDAL.SubtractMoney(userID, amount);
+                if (checkBalance)
+                {
+                    TempData["SuccessMessage"] = "Transferred Successfully";
+                    return View();
+                }
+                else if(!checkBalance)
+                {
+                    TempData["ErrorMessage"] = "Amount transferred exceeds balance";
+                    return View();
+                }
+                TempData["ErrorMessage"] = "Transfer Failed";
+                return View();
+            }
+            catch (Exception ex)
+            {
+                TempData["ErrorMessage"] = "No user account number entered";
+                return View();
+            }
+        }
+
     }
 }
 
