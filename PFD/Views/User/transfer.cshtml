@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Send Parameters to Controller</title>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 </head>
 <body>
@@ -26,7 +27,7 @@
         <input type="text" id="accountNumber" name="accountNumber" />
 
         <label for="amount">Amount:</label>
-        <input type="text" id="amount" name="amount" />
+        <input type="number" id="amount" name="amount" step="0.01" pattern="\d+(\.\d{1,2})?" title="Enter a valid number with up to two decimal places" />
 
         <button type="submit">Confirm</button>
     </form>
