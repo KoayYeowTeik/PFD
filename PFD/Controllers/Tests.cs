@@ -14,16 +14,30 @@ namespace PFD.Controllers
 		}
 		public IActionResult EmotionDetection()
 		{
+			//get video of camera
+			// load the models
+			// run the faceapi detection code to get the emotions (check the detections variable for processing)
 			return View();
 		}
 		public IActionResult FaceUpload()
 		{
+			// get video of camera
+			// load the facapi model to find face
+			// take screenshot of face when face found
+			// check if detection is >0.8 (do when integrate)
+			// convert image to blob and upload to firebase storage
 			return View();
 		}
 		public IActionResult FaceRecognition()
         {
+            // get video of camera
+            // load the facapi model to find face
+            // take screenshot of face when face found		
+			// get images from the firebase storage (no CORS)
+			// run face match in faceapi to match face based on eculian distance <0.2 (testing number)
+			//get the image name and slice off .png and return
 			return View();
-			/*try
+            /*try
 			{
             
                 Runtime.PythonDLL = @"..\python310.dll";
@@ -51,6 +65,9 @@ namespace PFD.Controllers
 		}
 		public IActionResult WhisperAI()
 		{
+			// on the microphone and record voices => seperate the existing voice into blobs
+			// pass the blob sound files into whisper to pass to langchain in javascript
+			// get the transcript as a string
 			return View();
 		}
 	}
