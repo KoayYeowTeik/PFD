@@ -194,50 +194,6 @@ namespace PFD_ASG.DAL
             return bankAccountList;
         }
 
-        public bool AddMoney(string accountNumber, decimal amount)
-        {
-            Users receiver = getUserByAccount(accountNumber);
-            bankAccount receiverBank = GetUserBankAccount(receiver.userID)[0];
-            if(receiverBank == null)
-            {
-                return false;
-            }
-            else
-            {
-                receiverBank.balance += amount;
-                SqlCommand cmd = conn.CreateCommand();
-                cmd.CommandText = @"UPDATE bankAccount SET balance = @balance WHERE accountNumber = @accountNumber";
-                cmd.Parameters.AddWithValue("@balance", receiverBank.balance);
-                cmd.Parameters.AddWithValue("@accountNumber", receiverBank.accountNumber);
-                conn.Open();
-                cmd.ExecuteNonQuery();
-                conn.Close();
-                return true;
-            }
-            
-        }
-        public bool SubtractMoney(int userID, decimal amount)
-        {
-            Users sender = getUser(userID);
-            bankAccount senderBank = GetUserBankAccount(sender.userID)[0];
-            if(senderBank.balance  < amount)
-            {
-                return false;
-            }
-            else
-            {
-                senderBank.balance -= amount;
-                SqlCommand cmd = conn.CreateCommand();
-                cmd.CommandText = @"UPDATE bankAccount SET balance = @balance WHERE accountNumber = @accountNumber";
-                cmd.Parameters.AddWithValue("@balance", senderBank.balance);
-                cmd.Parameters.AddWithValue("@accountNumber", senderBank.accountNumber);
-                conn.Open();
-                cmd.ExecuteNonQuery();
-                conn.Close();
-                return true;
-            }
-        }
-
         public int CreateAccount(Users user)
         {
             SqlCommand cmd = conn.CreateCommand();

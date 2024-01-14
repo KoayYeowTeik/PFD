@@ -1,23 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\table\\OneDrive - Ngee Ann Polytechnic\\Desktop\\Desktop\\Ngee Ann Poly\\Semester 4\\Portfolio Development\\Code\\PFD\\PFD.csproj": {}
+    "C:\\Users\\koayy\\source\\repos\\PFD\\PFD\\PFD.csproj": {}
   },
   "projects": {
-    "C:\\Users\\table\\OneDrive - Ngee Ann Polytechnic\\Desktop\\Desktop\\Ngee Ann Poly\\Semester 4\\Portfolio Development\\Code\\PFD\\PFD.csproj": {
+    "C:\\Users\\koayy\\source\\repos\\PFD\\PFD\\PFD.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\table\\OneDrive - Ngee Ann Polytechnic\\Desktop\\Desktop\\Ngee Ann Poly\\Semester 4\\Portfolio Development\\Code\\PFD\\PFD.csproj",
+        "projectUniqueName": "C:\\Users\\koayy\\source\\repos\\PFD\\PFD\\PFD.csproj",
         "projectName": "PFD",
-        "projectPath": "C:\\Users\\table\\OneDrive - Ngee Ann Polytechnic\\Desktop\\Desktop\\Ngee Ann Poly\\Semester 4\\Portfolio Development\\Code\\PFD\\PFD.csproj",
-        "packagesPath": "C:\\Users\\table\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\table\\OneDrive - Ngee Ann Polytechnic\\Desktop\\Desktop\\Ngee Ann Poly\\Semester 4\\Portfolio Development\\Code\\PFD\\obj\\",
+        "projectPath": "C:\\Users\\koayy\\source\\repos\\PFD\\PFD\\PFD.csproj",
+        "packagesPath": "C:\\Users\\koayy\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\koayy\\source\\repos\\PFD\\PFD\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\table\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\koayy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -25,6 +26,8 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "C:\\Program Files\\dotnet\\sdk\\7.0.305\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -79,6 +82,24 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.19, 6.0.19]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[6.0.19, 6.0.19]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.19, 6.0.19]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[6.0.19, 6.0.19]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -87,7 +108,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.305\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -16,7 +16,6 @@ namespace PFD_ASG.Controllers
     public class FacialRecognitionController : Controller
     {
         private IMongoCollection<Photo> PhotoCollection;
-        /**
         public FacialRecognitionController()
         {
             var client = new MongoClient("mongodb+srv://admin:password1234@ocbcbankingapplication.027aaww.mongodb.net/?retryWrites=true&w=majority");
@@ -166,7 +165,6 @@ namespace PFD_ASG.Controllers
                 
             }
         }
-        **/
     }
 
 }

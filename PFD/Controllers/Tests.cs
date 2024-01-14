@@ -20,9 +20,10 @@ namespace PFD.Controllers
 		{
 			return View();
 		}
-		public void FaceRecognition()
+		public IActionResult FaceRecognition()
         {
-			try
+			return View();
+			/*try
 			{
             
                 Runtime.PythonDLL = @"..\python310.dll";
@@ -41,9 +42,7 @@ namespace PFD.Controllers
                     sys.path.append(@"..\python_dependencies");
                     Console.WriteLine(test.ReturnString("Go to logout"));
 
-				}
-
-
+				}*/
         }
         public IActionResult Langchain()
 		{
