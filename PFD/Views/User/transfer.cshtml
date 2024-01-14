@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+<body>
+    @if (TempData["ErrorMessage"] != null)
+    {
+        <div class="alert alert-danger">
+            @TempData["ErrorMessage"]
+        </div>
+    }
+
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="text-success">
+            @TempData["SuccessMessage"]
+        </div>
+    }
+
+    <form asp-action="doTransfer" asp-controller="User" method="post">
+        <label for="accountNumber">Account Number:</label>
+        <input type="text" id="accountNumber" name="accountNumber" />
+
+        <label for="amount">Amount:</label>
+        <input type="text" id="amount" name="amount" />
+
+        <button type="submit">Confirm</button>
+    </form>
+</body>
+</html>
