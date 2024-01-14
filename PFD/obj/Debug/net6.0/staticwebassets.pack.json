@@ -57,10 +57,6 @@
       "PackagePath": "staticwebassets\\js\\tests2.js"
     },
     {
-      "Id": "C:\\Users\\koayy\\source\\repos\\PFD\\PFD\\wwwroot\\js\\tests3.js",
-      "PackagePath": "staticwebassets\\js\\tests3.js"
-    },
-    {
       "Id": "C:\\Users\\koayy\\source\\repos\\PFD\\PFD\\wwwroot\\lib\\bootstrap\\LICENSE",
       "PackagePath": "staticwebassets\\lib\\bootstrap"
     },

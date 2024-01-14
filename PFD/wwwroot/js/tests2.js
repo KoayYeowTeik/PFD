@@ -1,5 +1,4 @@
 //find face and freeze
-//write code to see if detection is more than 0.85
 const video = document.getElementById('video');
 const path = '../models';
 
@@ -22,9 +21,7 @@ function startVideo() {
 
     video.addEventListener('loadedmetadata', () => {
         // Video has loaded metadata, now we can create the canvas
-      
         const canvas = faceapi.createCanvasFromMedia(video);
-
         document.body.append(canvas);
         const displaySize = { width: video.width, height: video.height };
         faceapi.matchDimensions(canvas, displaySize);
@@ -36,7 +33,6 @@ function startVideo() {
                 .detectAllFaces(video, new faceapi.TinyFaceDetectorOptions())
                 .withFaceLandmarks()
                 .withFaceExpressions();
-            console.log(detections)
             const resizedDetections = faceapi.resizeResults(
                 detections,
                 displaySize

@@ -28,16 +28,10 @@ namespace PFD.Controllers
 			// convert image to blob and upload to firebase storage
 			return View();
 		}
-		public IActionResult FaceRecognition()
+		public void FaceRecognition()
         {
-            // get video of camera
-            // load the facapi model to find face
-            // take screenshot of face when face found		
-			// get images from the firebase storage (no CORS)
-			// run face match in faceapi to match face based on eculian distance <0.2 (testing number)
-			//get the image name and slice off .png and return
 			return View();
-            /*try
+			/*try
 			{
             
                 Runtime.PythonDLL = @"..\python310.dll";
@@ -56,7 +50,9 @@ namespace PFD.Controllers
                     sys.path.append(@"..\python_dependencies");
                     Console.WriteLine(test.ReturnString("Go to logout"));
 
-				}*/
+				}
+
+
         }
         public IActionResult Langchain()
 		{

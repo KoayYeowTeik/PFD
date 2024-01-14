@@ -22,7 +22,18 @@
 </style>
 
 <video id="video" width="720" height="560" autoplay muted></video>
-<ul id="imageList"></ul>
+<div class="imageUpload">
+    <input type="file" class="inp" onchange="getImageData(event)" />
+    <button onclick="selectImage()" class="selectImage">Select Images</button>
+    <span class="filedata"></span>
+    <div class="progressBar">
+        <div class="progress"></div>
+    </div>
+    <button onclick="uploadImage()" class="upload">Upload</button>
+    <span class="loading">Loading...</span>
+    <img class="img" />
+</div>
+<script>
 
-
+</script>
 
