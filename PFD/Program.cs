@@ -36,6 +36,6 @@ app.UseSession();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Tests}/{action=WhisperAI}/{id?}");
+    pattern: "{controller=Tests}/{action=FaceRecognition}/{id?}");
 
 app.Run();

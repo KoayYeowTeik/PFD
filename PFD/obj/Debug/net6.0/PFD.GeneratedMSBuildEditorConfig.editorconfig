@@ -72,10 +72,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVzdHNcRmFjZVVwbG9hZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/koayy/source/repos/PFD/PFD/Views/Tests/WhisperAI.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVzdHNcV2hpc3BlckFJLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/koayy/source/repos/PFD/PFD/Views/User/guide.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxndWlkZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -94,10 +90,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/koayy/source/repos/PFD/PFD/Views/User/submitimage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxzdWJtaXRpbWFnZS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/koayy/source/repos/PFD/PFD/Views/User/transfer.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclx0cmFuc2Zlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/koayy/source/repos/PFD/PFD/Views/User/tutorialMenu.cshtml]
