@@ -1,0 +1,70 @@
+﻿
+@{
+    Layout = null;
+}
+<h1>Voice Recording Example</h1>
+<button id="startRecording">Start Recording</button>
+<button id="stopRecording">Stop Recording</button>
+<script defer>
+    let mediaRecorder;
+    let audioChunks = [];
+    let timeoutID;
+
+    document.getElementById('startRecording').addEventListener('click', startRecording);
+    document.getElementById('stopRecording').addEventListener('click', stopRecording);
+
+    function startRecording() {
+        // Get user media to access the microphone
+        navigator.mediaDevices.getUserMedia({ audio: true })
+            .then(function (stream) {
+                // Create a media recorder with the user's stream
+                mediaRecorder = new MediaRecorder(stream);
+
+                // Event handler for when data is available
+                mediaRecorder.ondataavailable = function (e) {
+                    if (e.data.size > 0) {
+                        audioChunks.push(e.data);
+                    }
+                };
+
+                // Event handler for when recording is stopped
+                mediaRecorder.onstop = function () {
+                    const audioBlob = new Blob(audioChunks, { type: 'audio/wav' });
+                    // You can now use the audioBlob as needed, e.g., upload it to a server
+                    console.log("Recording stopped");
+                };
+
+                // Start recording
+                mediaRecorder.start();
+
+                // Check for pauses every 2 seconds
+                mediaRecorder.onstart = function () {
+                    timeoutID = setInterval(checkPause, 2000);
+                };
+            })
+            .catch(function (err) {
+                console.error('Error accessing microphone:', err);
+            });
+    }
+
+    function stopRecording() {
+        // Stop recording after 10 seconds (you can adjust the duration)
+        setTimeout(function () {
+            mediaRecorder.stop();
+            clearInterval(timeoutID);
+        }, 10000);
+    }
+
+    // Function to check for pauses
+    function checkPause() {
+        clearInterval(timeoutID);
+
+        // If there was a pause (no data received in the last 2 seconds), stop recording
+        if (audioChunks.length > 0) {
+            mediaRecorder.stop();
+        } else {
+            // Otherwise, resume checking for pauses
+            timeoutID = setInterval(checkPause, 2000);
+        }
+    }
+</script>

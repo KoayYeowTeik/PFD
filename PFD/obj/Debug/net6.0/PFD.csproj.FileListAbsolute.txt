@@ -152,3 +152,11 @@ C:\Users\koayy\source\repos\PFD\PFD\obj\Debug\net6.0\scopedcss\projectbundle\PFD
 C:\Users\koayy\source\repos\PFD\PFD\obj\Debug\net6.0\PFD.csproj.CopyComplete
 C:\Users\koayy\source\repos\PFD\PFD\obj\Debug\net6.0\PFD.genruntimeconfig.cache
 C:\Users\koayy\source\repos\PFD\PFD\obj\Debug\net6.0\ref\PFD.dll
+C:\Users\koayy\source\repos\PFD\PFD\bin\Debug\net6.0\Azure.AI.OpenAI.dll
+C:\Users\koayy\source\repos\PFD\PFD\bin\Debug\net6.0\LangChain.NET.dll
+C:\Users\koayy\source\repos\PFD\PFD\bin\Debug\net6.0\Microsoft.DeepDev.TokenizerLib.dll
+C:\Users\koayy\source\repos\PFD\PFD\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\koayy\source\repos\PFD\PFD\bin\Debug\net6.0\Microsoft.Extensions.Options.dll
+C:\Users\koayy\source\repos\PFD\PFD\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll
+C:\Users\koayy\source\repos\PFD\PFD\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\koayy\source\repos\PFD\PFD\bin\Debug\net6.0\OpenAI_API.dll
