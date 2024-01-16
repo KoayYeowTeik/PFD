@@ -67,7 +67,7 @@ namespace PFD.Controllers
             // the entire chat history is available in chat.Messages
             foreach (ChatMessage msg in chat.Messages)
             {
-                Console.WriteLine($"{msg.Role}: {msg.Content}");
+                Console.WriteLine($"{msg.Role}: {msg.Content}");   
             }
             // should print something like "Hi! How can I help you?"
             /*string endpoint = "https://api.openai.com/v1/chat/completions";
