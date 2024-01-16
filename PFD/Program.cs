@@ -36,6 +36,6 @@ app.UseSession();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Tests}/{action=Langchain}/{id?}");
+    pattern: "{controller=User}/{action=Login}/{id?}");
 
 app.Run();

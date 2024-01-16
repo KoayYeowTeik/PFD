@@ -1,65 +1,29 @@
-﻿<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Form</title>
-</head>
-<body>
-    @if (TempData["ErrorMessage"] != null)
-    {
-        <div class="alert alert-danger">
-            @TempData["ErrorMessage"]
-        </div>
-    }
-    <h2>Login</h2>
-    <form asp-controller="User" asp-action="authenticate" method="post">
-        <label for="LoginID">Login ID:</label>
-        <input type="text" id="LoginID" name="LoginID" required>
+﻿@{
+	Layout = null;
+}
+<script defer src="~/js/face-api.min.js"></script>
+<script defer src="~/js/user.js"></script>
 
-        <label for="Password">Password:</label>
-        <input type="Password" id="Password" name="Password" required>
+@if (TempData["ErrorMessage"] != null)
+{
+	<div class="alert alert-danger">
+		@TempData["ErrorMessage"]
+	</div>
+	// this part needed?
+}
+<p>• Security advisory: Beware of fake OCBC SMSes. Authentic OCBC SMSes never contain links and always originate from OCBC and OCBC Bank. Learn more.</p>
+<form asp-controller="User" asp-action="authenticate" method="post">
+	<!--Add lock icon here--><p>Secure Site</p>
+	<h3>Online Banking</h3>
+	<input type="text" id="LoginID" name="LoginID" placeholder="Access code" required>
 
-        <input type="submit" value="Login">
-    </form>
-    <button id="loginWithFaceBtn">Login with face</button>
-    <button onclick="location.href='@Url.Action("signup", "User")'">sign up</button>
+	<input type="Password" id="Password" name="Password" placeholder="PIN" required>
 
-</body>
-<script>
-      document.addEventListener('DOMContentLoaded', function () {
-        // Attach a click event handler to the button
-        document.getElementById('loginWithFaceBtn').addEventListener('click', function () {
-            // Create a new XMLHttpRequest object
-            var xhr = new XMLHttpRequest();
+	<input type="submit" value="Login">
+	<p><a asp-controller="User" asp-action="ForgotLoginDetails">No Access Code/Pin? Click here.</a></p>
+	<button type="button" id="face_recognition_button">Login with Face ID</button> <!--Add a face id icon here-->
+</form>
+<p>Don't have Online Banking?<a asp-controller="User" asp-action="SignUp"> Sign up now.</a></p>
+<video id="video" width="720" height="560" autoplay muted></video>
 
-            // Configure the request
-            xhr.open('POST', '/YourController/LoginWithFace', true); // Adjust the URL and method accordingly
-            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 
-            // Set up the callback for a successful response
-            xhr.onload = function () {
-                if (xhr.status >= 200 && xhr.status < 300) {
-                    // Successful response
-                    var responseData = JSON.parse(xhr.responseText);
-                    console.log('Login with face successful:', responseData);
-                } else {
-                    // Error response
-                    console.error('Error during login with face:', xhr.statusText);
-                }
-            };
-
-            // Set up the callback for network errors
-            xhr.onerror = function () {
-                console.error('Network error during login with face');
-            };
-
-            // Send the request (you can include data in the send method if needed)
-            xhr.send();
-
-            // Prevent the default form submission behavior
-            return false;
-        });
-    });
-</script>
-</html>

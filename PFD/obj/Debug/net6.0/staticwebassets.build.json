@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "VTvCW8XXBoDkzc+2dke+JShr6oF72dmOhKtEN06i8z8=",
+  "Hash": "KO/AAd5+b6kaufX9NsfGTpkjM0Nd3c+q2gX9e24xhBs=",
   "Source": "PFD",
   "BasePath": "_content/PFD",
   "Mode": "Default",
@@ -287,6 +287,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\tests3.js"
+    },
+    {
+      "Identity": "C:\\Users\\koayy\\source\\repos\\PFD\\PFD\\wwwroot\\js\\user.js",
+      "SourceId": "PFD",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\koayy\\source\\repos\\PFD\\PFD\\wwwroot\\",
+      "BasePath": "_content/PFD",
+      "RelativePath": "js/user.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\user.js"
     },
     {
       "Identity": "C:\\Users\\koayy\\source\\repos\\PFD\\PFD\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",

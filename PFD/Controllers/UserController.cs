@@ -18,10 +18,7 @@ namespace PFD_ASG.Controllers
         private IMongoCollection<Photo> PhotoCollection;
         public UserController()
         {
-            var client = new MongoClient("mongodb+srv://admin:password1234@ocbcbankingapplication.027aaww.mongodb.net/?retryWrites=true&w=majority");
-            var database = client.GetDatabase("OCBCDatabase");
-            pdfCollection = database.GetCollection<PdfDocument>("Medical Certificates");
-            PhotoCollection = database.GetCollection<Photo>("FacialRecognition");
+          
         }
         public IActionResult Index()
         {
@@ -170,7 +167,11 @@ namespace PFD_ASG.Controllers
         [HttpPost]
         public async Task<IActionResult> uploadcert(IFormFile file)
         {
-            if (file != null && file.Length > 0)
+			var client = new MongoClient("mongodb+srv://admin:password1234@ocbcbankingapplication.027aaww.mongodb.net/?retryWrites=true&w=majority");
+			var database = client.GetDatabase("OCBCDatabase");
+			pdfCollection = database.GetCollection<PdfDocument>("Medical Certificates");
+			PhotoCollection = database.GetCollection<Photo>("FacialRecognition");
+			if (file != null && file.Length > 0)
             {
                 using (var memoryStream = new MemoryStream())
                 {
