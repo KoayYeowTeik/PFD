@@ -1,8 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\PFD"
+    "\\PFD",
+    "\\PFD\\Views",
+    "\\PFD\\Views\\User"
   ],
-  "SelectedNode": "\\PFD.sln",
+  "SelectedNode": "\\PFD\\Views\\User\\signup.cshtml",
   "PreviewInSolutionExplorer": false
 }
