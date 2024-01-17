@@ -2,6 +2,7 @@
 using PFD_ASG.Models;
 using PFD_ASG.DAL;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using MongoDB.Driver;
 using static MongoDB.Driver.WriteConcern;
 using System.Threading;
@@ -206,19 +207,6 @@ namespace PFD_ASG.Controllers
         public ActionResult setlimit(int daily, int monthly)
         {
             return View();
-        }
-
-        [HttpPost]
-        [Consumes("application/json")]
-        public ActionResult submitimage([FromBody] JsonElement photo)
-        {
-            Photo image = new Photo
-            {
-                UserID = (int)HttpContext.Session.GetInt32("TempUser"),
-                ImageData = Convert.FromBase64String(photo.GetString())
-            };
-            PhotoCollection.InsertOne(image);
-            return RedirectToAction("login");
         }
 
         public ActionResult submitimage()
