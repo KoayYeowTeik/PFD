@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Python.Runtime;
 using System.Reflection;
-using Newtonsoft.Json;
+using System.Text.Json;
 using PFD_ASG.Models;
 
 namespace PFD_ASG.Controllers

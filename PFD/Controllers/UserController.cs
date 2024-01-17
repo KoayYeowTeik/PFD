@@ -1,12 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using PFD_ASG.Models;
 using PFD_ASG.DAL;
-using Newtonsoft.Json;
+using System.Text.Json;
 using MongoDB.Driver;
-using static MongoDB.Driver.WriteConcern;
-using System.Threading;
-using static System.TimeZoneInfo;
-using System.Globalization;
 
 namespace PFD_ASG.Controllers
 {
@@ -26,6 +22,7 @@ namespace PFD_ASG.Controllers
         }
         public IActionResult Index()
         {
+            
             int userid = (int)HttpContext.Session.GetInt32("UserID");
 
             List<TransactionView> TransactionHistoryList = transactionHistoryDAL.GetTransactionHistory(userid);
@@ -231,130 +228,6 @@ namespace PFD_ASG.Controllers
         public ActionResult submitimage()
         {
             return View();
-        }
-        public ActionResult transfer()
-        {
-            return View();
-        }
-
-        public bool checkAmount(decimal amount)
-        {
-            if(amount > 5000)
-            {
-                return false;
-            }
-            else
-            {
-                return true;
-            }
-        }
-
-        public void initiateTransfer(string accountNumber, decimal amount, int recordID)
-        {
-            int userID = (int)HttpContext.Session.GetInt32("UserID");
-            bool checkAccount = usersDAL.AddMoney(accountNumber, amount);
-            if (!checkAccount)
-            {
-                transactionHistoryDAL.updateTransactionHistory(recordID, 3);
-                TempData["ErrorMessage"] = "User account cannot be found";
-            }
-            bool checkBalance = usersDAL.SubtractMoney(userID, amount);
-            if (checkBalance)
-            {
-                TempData["SuccessMessage"] = "Transferred Successfully";
-            }
-            else if (!checkBalance)
-            {
-                transactionHistoryDAL.updateTransactionHistory(recordID, 3);
-                TempData["ErrorMessage"] = "Amount transferred exceeds balance";
-            }
-        }
-
-        [HttpPost]
-        public ActionResult pendingApproval (string accountNumber, decimal amount)
-        {
-            string formattedDateTime = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff");
-            DateTime parsedDateTime = DateTime.ParseExact(formattedDateTime, "yyyy-MM-dd HH:mm:ss.fff", CultureInfo.InvariantCulture); //ignore system culture date format
-
-            TransactionHistory transactionHistory = new TransactionHistory
-            {
-                recordID = 1,
-                transactionTime = parsedDateTime,
-                description = null,
-                senderID = (int)HttpContext.Session.GetInt32("UserID"),
-                receiverID = usersDAL.getUserByAccount(accountNumber).userID,
-                amount = amount,
-                status = 2,
-                category = "Transfers"
-            };
-                
-            int recordID = transactionHistoryDAL.createTransactionHistory(transactionHistory);
-                
-            int attempts = 0;
-            int check = 0;
-            while (true)
-            {
-                if(attempts >= 20)
-                {
-                    break;
-                }
-                else
-                {
-                    check = transactionHistoryDAL.GetTransactionStatus(recordID); ;
-                    if (check == 1)
-                    {
-                        initiateTransfer(accountNumber, amount, recordID);
-                        break;
-                    }
-                    else if (check == 3)
-                    {
-                        TempData["ErrorMessage"] = "Transfer denied";
-                        break;
-                    }
-                }
-                Thread.Sleep(3000);
-                attempts++;
-            }
-            return RedirectToAction("transfer");
-        }
-
-        [HttpPost]
-        public ActionResult doTransfer(string accountNumber, decimal amount)
-        {
-            try
-            {
-                if (string.IsNullOrEmpty(accountNumber) || amount <= 0)
-                {
-                    return RedirectToAction("transfer");
-                }
-
-                int userID = (int)HttpContext.Session.GetInt32("UserID");
-
-                bool checkAccount = usersDAL.AddMoney(accountNumber, amount);
-                if (!checkAccount)
-                {
-                    TempData["ErrorMessage"] = "User account cannot be found";
-                    return RedirectToAction("transfer");
-                }
-                bool checkBalance = usersDAL.SubtractMoney(userID, amount);
-                if (checkBalance)
-                {
-                    TempData["SuccessMessage"] = "Transferred Successfully";
-                    return RedirectToAction("transfer");
-                }
-                else if (!checkBalance)
-                {
-                    TempData["ErrorMessage"] = "Amount transferred exceeds balance";
-                    return RedirectToAction("transfer");
-                }
-                TempData["ErrorMessage"] = "Transfer Failed";
-                return RedirectToAction("transfer");
-            }
-            catch (Exception ex)
-            {
-                TempData["ErrorMessage"] = "No user account number entered";
-                return RedirectToAction("transfer");
-            }
         }
     }
 }

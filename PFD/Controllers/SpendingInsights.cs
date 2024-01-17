@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using PFD_ASG.Models;
 using PFD_ASG.DAL;
-using Newtonsoft.Json;
+using System.Text.Json;
 
 namespace PFD_ASG.Controllers
 {

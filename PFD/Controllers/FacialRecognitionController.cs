@@ -2,7 +2,7 @@
 using MongoDB.Driver;
 using PFD_ASG.Models;
 using MongoDB.Bson;
-using Newtonsoft.Json;
+using System.Text.Json;
 using Emgu.CV;
 using Emgu.CV.CvEnum;
 using Emgu.CV.Structure;
