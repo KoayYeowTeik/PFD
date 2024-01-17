@@ -56,8 +56,14 @@ namespace PFD_ASG.Controllers
         {
             return View();
         }
+        [HttpPost]
+        [Consumes("application/json")]
+        public IActionResult LoginWithFace([FromBody] JsonElement jsonstring)
+        {
+			return View();
+        }
 
-        public IActionResult logout()
+			public IActionResult logout()
         {
             HttpContext.Session.Clear();
             return RedirectToAction("", "Home");
