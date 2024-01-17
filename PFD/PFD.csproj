@@ -9,8 +9,12 @@
   <ItemGroup>
     <PackageReference Include="Emgu.CV" Version="4.8.1.5350" />
     <PackageReference Include="Emgu.CV.runtime.windows" Version="4.8.1.5350" />
+<<<<<<< HEAD
     <PackageReference Include="LangChain.NET" Version="0.0.2" />
     <PackageReference Include="Microsoft.Data.SqlClient" Version="5.2.0-preview4.23342.2" />
+=======
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="5.1.4" />
+>>>>>>> 25e204417ba9d16adafb4ab2f187c989ec63e891
     <PackageReference Include="MongoDB.Driver" Version="2.23.1" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="OpenAI" Version="1.10.0" />
