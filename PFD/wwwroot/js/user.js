@@ -108,6 +108,7 @@ function startVideo() {
                                         alert("An error occurred. Check the console for details.");
                                     }
                                 });*/
+                                // ajax code to send data to the backend (controller code not written because of code corruption yet to be fixed);
                             }
                             else {
                                 video_validation.textContent = "You do not have an account with us";
