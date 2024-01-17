@@ -60,6 +60,7 @@ namespace PFD_ASG.Controllers
         [Consumes("application/json")]
         public IActionResult LoginWithFace([FromBody] JsonElement jsonstring)
         {
+            Users user = usersDAL.getUserByUsernamme("test");
 			return View();
         }
 

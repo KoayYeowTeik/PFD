@@ -123,6 +123,10 @@ namespace PFD_ASG.DAL
             conn.Close();
             return user;
         }
+        public Users getUserByUsernamme(string username)
+        {
+            return null;
+        }
 
         public Users authenticateUser(string LoginID, string Password)
         {
