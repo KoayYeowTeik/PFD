@@ -1,23 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\table\\OneDrive - Ngee Ann Polytechnic\\Desktop\\Desktop\\Ngee Ann Poly\\Semester 4\\Portfolio Development\\Code\\PFD\\PFD.csproj": {}
+    "C:\\School\\Y2 S2\\PFD\\ASG 2\\ASG 2 Code\\PFD\\PFD.csproj": {}
   },
   "projects": {
-    "C:\\Users\\table\\OneDrive - Ngee Ann Polytechnic\\Desktop\\Desktop\\Ngee Ann Poly\\Semester 4\\Portfolio Development\\Code\\PFD\\PFD.csproj": {
+    "C:\\School\\Y2 S2\\PFD\\ASG 2\\ASG 2 Code\\PFD\\PFD.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\table\\OneDrive - Ngee Ann Polytechnic\\Desktop\\Desktop\\Ngee Ann Poly\\Semester 4\\Portfolio Development\\Code\\PFD\\PFD.csproj",
+        "projectUniqueName": "C:\\School\\Y2 S2\\PFD\\ASG 2\\ASG 2 Code\\PFD\\PFD.csproj",
         "projectName": "PFD",
-        "projectPath": "C:\\Users\\table\\OneDrive - Ngee Ann Polytechnic\\Desktop\\Desktop\\Ngee Ann Poly\\Semester 4\\Portfolio Development\\Code\\PFD\\PFD.csproj",
-        "packagesPath": "C:\\Users\\table\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\table\\OneDrive - Ngee Ann Polytechnic\\Desktop\\Desktop\\Ngee Ann Poly\\Semester 4\\Portfolio Development\\Code\\PFD\\obj\\",
+        "projectPath": "C:\\School\\Y2 S2\\PFD\\ASG 2\\ASG 2 Code\\PFD\\PFD.csproj",
+        "packagesPath": "C:\\Users\\lJunh\\.nuget\\packages\\",
+        "outputPath": "C:\\School\\Y2 S2\\PFD\\ASG 2\\ASG 2 Code\\PFD\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\table\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\lJunh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -57,7 +58,7 @@
             },
             "Microsoft.Data.SqlClient": {
               "target": "Package",
-              "version": "[5.1.4, )"
+              "version": "[5.2.0-preview4.23342.2, )"
             },
             "MongoDB.Driver": {
               "target": "Package",
