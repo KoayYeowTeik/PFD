@@ -1,7 +1,12 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using PFD_ASG.Models;
 using PFD_ASG.DAL;
+<<<<<<< HEAD
 using System.Text.Json;
+=======
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+>>>>>>> 6d9ff0ba0bcff217c7ca7726cb697c7e372c7cda
 using MongoDB.Driver;
 
 namespace PFD_ASG.Controllers
@@ -210,19 +215,6 @@ namespace PFD_ASG.Controllers
         public ActionResult setlimit(int daily, int monthly)
         {
             return View();
-        }
-
-        [HttpPost]
-        [Consumes("application/json")]
-        public ActionResult submitimage([FromBody] JsonElement photo)
-        {
-            Photo image = new Photo
-            {
-                UserID = (int)HttpContext.Session.GetInt32("TempUser"),
-                ImageData = Convert.FromBase64String(photo.GetString())
-            };
-            PhotoCollection.InsertOne(image);
-            return RedirectToAction("login");
         }
 
         public ActionResult submitimage()
