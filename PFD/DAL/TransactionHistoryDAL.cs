@@ -1,5 +1,4 @@
 ﻿using Microsoft.Data.SqlClient;
-using MongoDB.Driver;
 using PFD_ASG.Models;
 using System.Reflection.PortableExecutable;
 
@@ -155,46 +154,5 @@ namespace PFD_ASG.DAL
             return TransTotal;
         }
 
-        public int createTransactionHistory(TransactionHistory transactionHistory)
-        {
-            SqlCommand cmd = conn.CreateCommand();
-            cmd.CommandText = @"INSERT INTO TransactionHistory (transactionTime, description, senderID, receiverID, amount, status, category)
-                             OUTPUT INSERTED.recordID
-                             VALUES (@TransactionTime, @Description, @SenderID, @ReceiverID, @Amount, @Status, @Category)";
-
-            cmd.Parameters.AddWithValue("@TransactionTime", transactionHistory.transactionTime);
-            cmd.Parameters.AddWithValue("@Description", transactionHistory.description);
-            cmd.Parameters.AddWithValue("@SenderID", transactionHistory.senderID);
-            cmd.Parameters.AddWithValue("@ReceiverID", transactionHistory.receiverID);
-            cmd.Parameters.AddWithValue("@Amount", transactionHistory.amount);
-            cmd.Parameters.AddWithValue("@Status", transactionHistory.status);
-            cmd.Parameters.AddWithValue("@Category", transactionHistory.category);
-
-            conn.Open();
-            int recordID = (int)cmd.ExecuteScalar();
-            conn.Close();
-            return recordID;
-        }
-
-        public void updateTransactionHistory(int recordID, int status)
-        {
-            SqlCommand cmd = conn.CreateCommand();
-            cmd.CommandText = @"UPDATE dbo.TransactionHistory SET status = @status WHERE recordID = @recordID";
-            cmd.Parameters.AddWithValue("@status", status);
-            cmd.Parameters.AddWithValue("@recordID", recordID);
-            conn.Open();
-            cmd.ExecuteNonQuery();
-            conn.Close();
-        }
-        public int GetTransactionStatus(int recordID)
-        {
-            SqlCommand cmd = conn.CreateCommand();
-            cmd.CommandText = @"SELECT status FROM TransactionHistory WHERE recordID = @recordID";
-            cmd.Parameters.AddWithValue("@recordID", recordID);
-            conn.Open();
-            int status = int.Parse(cmd.ExecuteScalar().ToString());
-            conn.Close();
-            return status;
-        }
     }
 }

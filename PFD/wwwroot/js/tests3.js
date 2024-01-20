@@ -91,7 +91,6 @@ function startVideo() {
                 }
             } else {
                 isFaceDetected = false;
-                isFaceDetected = false;
             }
         }, 100);
     });

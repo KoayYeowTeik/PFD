@@ -2,8 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\PFD",
-    "\\PFD\\Controllers"
+    "\\PFD\\Views",
+    "\\PFD\\Views\\User"
   ],
-  "SelectedNode": "\\PFD\\Controllers\\UserController.cs",
+  "SelectedNode": "\\PFD\\Views\\User\\signup.cshtml",
   "PreviewInSolutionExplorer": false
 }

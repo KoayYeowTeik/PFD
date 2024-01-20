@@ -36,6 +36,6 @@ app.UseSession();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Tests}/{action=FaceRecognition}/{id?}");
+    pattern: "{controller=User}/{action=SignUp}/{id?}");
 
 app.Run();

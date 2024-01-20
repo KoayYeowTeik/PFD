@@ -51,13 +51,25 @@
               "target": "Package",
               "version": "[4.8.1.5350, )"
             },
+            "LangChain.NET": {
+              "target": "Package",
+              "version": "[0.0.2, )"
+            },
             "Microsoft.Data.SqlClient": {
               "target": "Package",
-              "version": "[5.1.4, )"
+              "version": "[5.2.0-preview4.23342.2, )"
             },
             "MongoDB.Driver": {
               "target": "Package",
               "version": "[2.23.1, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            },
+            "OpenAI": {
+              "target": "Package",
+              "version": "[1.10.0, )"
             },
             "OpenCV": {
               "target": "Package",

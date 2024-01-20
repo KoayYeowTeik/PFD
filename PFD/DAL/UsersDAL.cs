@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.Data.SqlClient;
+﻿using Microsoft.Data.SqlClient;
 using PFD_ASG.Models;
 
 namespace PFD_ASG.DAL
@@ -124,6 +123,10 @@ namespace PFD_ASG.DAL
             conn.Close();
             return user;
         }
+        public Users getUserByUsernamme(string username)
+        {
+            return null;
+        }
 
         public Users authenticateUser(string LoginID, string Password)
         {
@@ -166,16 +169,20 @@ namespace PFD_ASG.DAL
         // Get all accounts for a user
         public List<bankAccount> GetUserBankAccount(int userid)
 		{
+            //Create a SqlCommand object from connection object
             SqlCommand cmd = conn.CreateCommand();
 
+            //Specify the SELECT SQL statement to get user details
             cmd.CommandText = @"select * from bankAccount where userID=@userid";
             cmd.Parameters.AddWithValue("@userid", userid);
+            //Open a database connection
             conn.Open();
-            SqlDataReader reader = cmd.ExecuteReader();
+           SqlDataReader reader = cmd.ExecuteReader();
             List<bankAccount> bankAccountList = new List<bankAccount>();
 
             while (reader.Read())
             {
+                // Create bankAccount Object
                 bankAccount bankAccount = new bankAccount
                 {
                     accountID = reader.GetInt32(0),
@@ -183,54 +190,12 @@ namespace PFD_ASG.DAL
                     balance = reader.GetDecimal(2),
                     userID = reader.GetInt32(3),
                 };
+                //Add bankAccount into A list
                 bankAccountList.Add(bankAccount);
             }
             reader.Close();
             conn.Close();
             return bankAccountList;
-        }
-        public bool AddMoney(string accountNumber, decimal amount)
-        {
-            Users receiver = getUserByAccount(accountNumber);
-            bankAccount receiverBank = GetUserBankAccount(receiver.userID)[0];
-            if (receiverBank == null)
-            {
-                return false;
-            }
-            else
-            {
-                receiverBank.balance += amount;
-                SqlCommand cmd = conn.CreateCommand();
-                cmd.CommandText = @"UPDATE bankAccount SET balance = @balance WHERE accountNumber = @accountNumber";
-                cmd.Parameters.AddWithValue("@balance", receiverBank.balance);
-                cmd.Parameters.AddWithValue("@accountNumber", receiverBank.accountNumber);
-                conn.Open();
-                cmd.ExecuteNonQuery();
-                conn.Close();
-                return true;
-            }
-
-        }
-        public bool SubtractMoney(int userID, decimal amount)
-        {
-            Users sender = getUser(userID);
-            bankAccount senderBank = GetUserBankAccount(sender.userID)[0];
-            if (senderBank.balance < amount)
-            {
-                return false;
-            }
-            else
-            {
-                senderBank.balance -= amount;
-                SqlCommand cmd = conn.CreateCommand();
-                cmd.CommandText = @"UPDATE bankAccount SET balance = @balance WHERE accountNumber = @accountNumber";
-                cmd.Parameters.AddWithValue("@balance", senderBank.balance);
-                cmd.Parameters.AddWithValue("@accountNumber", senderBank.accountNumber);
-                conn.Open();
-                cmd.ExecuteNonQuery();
-                conn.Close();
-                return true;
-            }
         }
 
         public int CreateAccount(Users user)

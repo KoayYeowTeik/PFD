@@ -48,6 +48,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/table/OneDrive - Ngee Ann Polytechnic/Desktop/Desktop/Ngee Ann Poly/Semester 4/Portfolio Development/Code/PFD/Views/Shared/_Chatbot.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9DaGF0Ym90LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/table/OneDrive - Ngee Ann Polytechnic/Desktop/Desktop/Ngee Ann Poly/Semester 4/Portfolio Development/Code/PFD/Views/Shared/_Footer.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Gb290ZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -70,6 +74,14 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/table/OneDrive - Ngee Ann Polytechnic/Desktop/Desktop/Ngee Ann Poly/Semester 4/Portfolio Development/Code/PFD/Views/Tests/FaceUpload.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVzdHNcRmFjZVVwbG9hZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/table/OneDrive - Ngee Ann Polytechnic/Desktop/Desktop/Ngee Ann Poly/Semester 4/Portfolio Development/Code/PFD/Views/Tests/Langchain.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVzdHNcTGFuZ2NoYWluLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/table/OneDrive - Ngee Ann Polytechnic/Desktop/Desktop/Ngee Ann Poly/Semester 4/Portfolio Development/Code/PFD/Views/Tests/WhisperAI.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVzdHNcV2hpc3BlckFJLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/table/OneDrive - Ngee Ann Polytechnic/Desktop/Desktop/Ngee Ann Poly/Semester 4/Portfolio Development/Code/PFD/Views/User/guide.cshtml]

@@ -9,109 +9,121 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = PFD
 build_property.RootNamespace = PFD
-build_property.ProjectDir = C:\Users\table\OneDrive - Ngee Ann Polytechnic\Desktop\Desktop\Ngee Ann Poly\Semester 4\Portfolio Development\Code\PFD\
+build_property.ProjectDir = C:\Users\koayy\source\repos\Yeet\PFD\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\table\OneDrive - Ngee Ann Polytechnic\Desktop\Desktop\Ngee Ann Poly\Semester 4\Portfolio Development\Code\PFD
+build_property.MSBuildProjectDirectory = C:\Users\koayy\source\repos\Yeet\PFD
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/table/OneDrive - Ngee Ann Polytechnic/Desktop/Desktop/Ngee Ann Poly/Semester 4/Portfolio Development/Code/PFD/Views/Error.cshtml]
+[C:/Users/koayy/source/repos/Yeet/PFD/Views/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/table/OneDrive - Ngee Ann Polytechnic/Desktop/Desktop/Ngee Ann Poly/Semester 4/Portfolio Development/Code/PFD/Views/FacialRecognition/TestCapture.cshtml]
+[C:/Users/koayy/source/repos/Yeet/PFD/Views/FacialRecognition/TestCapture.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmFjaWFsUmVjb2duaXRpb25cVGVzdENhcHR1cmUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/table/OneDrive - Ngee Ann Polytechnic/Desktop/Desktop/Ngee Ann Poly/Semester 4/Portfolio Development/Code/PFD/Views/FacialRecognition/TestFaceRecognition.cshtml]
+[C:/Users/koayy/source/repos/Yeet/PFD/Views/FacialRecognition/TestFaceRecognition.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmFjaWFsUmVjb2duaXRpb25cVGVzdEZhY2VSZWNvZ25pdGlvbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/table/OneDrive - Ngee Ann Polytechnic/Desktop/Desktop/Ngee Ann Poly/Semester 4/Portfolio Development/Code/PFD/Views/Home/Index.cshtml]
+[C:/Users/koayy/source/repos/Yeet/PFD/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/table/OneDrive - Ngee Ann Polytechnic/Desktop/Desktop/Ngee Ann Poly/Semester 4/Portfolio Development/Code/PFD/Views/Home/Privacy.cshtml]
+[C:/Users/koayy/source/repos/Yeet/PFD/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/table/OneDrive - Ngee Ann Polytechnic/Desktop/Desktop/Ngee Ann Poly/Semester 4/Portfolio Development/Code/PFD/Views/PdfUpload/UploadPdf.cshtml]
+[C:/Users/koayy/source/repos/Yeet/PFD/Views/PdfUpload/UploadPdf.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGRmVXBsb2FkXFVwbG9hZFBkZi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/table/OneDrive - Ngee Ann Polytechnic/Desktop/Desktop/Ngee Ann Poly/Semester 4/Portfolio Development/Code/PFD/Views/PdfUpload/ViewPdf.cshtml]
+[C:/Users/koayy/source/repos/Yeet/PFD/Views/PdfUpload/ViewPdf.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGRmVXBsb2FkXFZpZXdQZGYuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/table/OneDrive - Ngee Ann Polytechnic/Desktop/Desktop/Ngee Ann Poly/Semester 4/Portfolio Development/Code/PFD/Views/Privacy.cshtml]
+[C:/Users/koayy/source/repos/Yeet/PFD/Views/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/table/OneDrive - Ngee Ann Polytechnic/Desktop/Desktop/Ngee Ann Poly/Semester 4/Portfolio Development/Code/PFD/Views/Shared/_Footer.cshtml]
+[C:/Users/koayy/source/repos/Yeet/PFD/Views/Shared/_Chatbot.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9DaGF0Ym90LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/koayy/source/repos/Yeet/PFD/Views/Shared/_Footer.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Gb290ZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/table/OneDrive - Ngee Ann Polytechnic/Desktop/Desktop/Ngee Ann Poly/Semester 4/Portfolio Development/Code/PFD/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/koayy/source/repos/Yeet/PFD/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/table/OneDrive - Ngee Ann Polytechnic/Desktop/Desktop/Ngee Ann Poly/Semester 4/Portfolio Development/Code/PFD/Views/SpendingInsights/SpendingInsights.cshtml]
+[C:/Users/koayy/source/repos/Yeet/PFD/Views/SpendingInsights/SpendingInsights.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3BlbmRpbmdJbnNpZ2h0c1xTcGVuZGluZ0luc2lnaHRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/table/OneDrive - Ngee Ann Polytechnic/Desktop/Desktop/Ngee Ann Poly/Semester 4/Portfolio Development/Code/PFD/Views/Tests/EmotionDetection.cshtml]
+[C:/Users/koayy/source/repos/Yeet/PFD/Views/Tests/EmotionDetection.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVzdHNcRW1vdGlvbkRldGVjdGlvbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/table/OneDrive - Ngee Ann Polytechnic/Desktop/Desktop/Ngee Ann Poly/Semester 4/Portfolio Development/Code/PFD/Views/Tests/FaceRecognition.cshtml]
+[C:/Users/koayy/source/repos/Yeet/PFD/Views/Tests/FaceRecognition.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVzdHNcRmFjZVJlY29nbml0aW9uLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/table/OneDrive - Ngee Ann Polytechnic/Desktop/Desktop/Ngee Ann Poly/Semester 4/Portfolio Development/Code/PFD/Views/Tests/FaceUpload.cshtml]
+[C:/Users/koayy/source/repos/Yeet/PFD/Views/Tests/FaceUpload.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVzdHNcRmFjZVVwbG9hZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/table/OneDrive - Ngee Ann Polytechnic/Desktop/Desktop/Ngee Ann Poly/Semester 4/Portfolio Development/Code/PFD/Views/User/guide.cshtml]
+[C:/Users/koayy/source/repos/Yeet/PFD/Views/Tests/Langchain.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVzdHNcTGFuZ2NoYWluLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/koayy/source/repos/Yeet/PFD/Views/Tests/WhisperAI.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVzdHNcV2hpc3BlckFJLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/koayy/source/repos/Yeet/PFD/Views/User/guide.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxndWlkZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/table/OneDrive - Ngee Ann Polytechnic/Desktop/Desktop/Ngee Ann Poly/Semester 4/Portfolio Development/Code/PFD/Views/User/login.cshtml]
+[C:/Users/koayy/source/repos/Yeet/PFD/Views/User/login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxsb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/table/OneDrive - Ngee Ann Polytechnic/Desktop/Desktop/Ngee Ann Poly/Semester 4/Portfolio Development/Code/PFD/Views/User/setlimit.cshtml]
+[C:/Users/koayy/source/repos/Yeet/PFD/Views/User/setlimit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxzZXRsaW1pdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/table/OneDrive - Ngee Ann Polytechnic/Desktop/Desktop/Ngee Ann Poly/Semester 4/Portfolio Development/Code/PFD/Views/User/signup.cshtml]
+[C:/Users/koayy/source/repos/Yeet/PFD/Views/User/signup.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxzaWdudXAuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/table/OneDrive - Ngee Ann Polytechnic/Desktop/Desktop/Ngee Ann Poly/Semester 4/Portfolio Development/Code/PFD/Views/User/submitimage.cshtml]
+[C:/Users/koayy/source/repos/Yeet/PFD/Views/User/submitimage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxzdWJtaXRpbWFnZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/table/OneDrive - Ngee Ann Polytechnic/Desktop/Desktop/Ngee Ann Poly/Semester 4/Portfolio Development/Code/PFD/Views/User/transfer.cshtml]
+[C:/Users/koayy/source/repos/Yeet/PFD/Views/User/transfer.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclx0cmFuc2Zlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/table/OneDrive - Ngee Ann Polytechnic/Desktop/Desktop/Ngee Ann Poly/Semester 4/Portfolio Development/Code/PFD/Views/User/tutorialMenu.cshtml]
+[C:/Users/koayy/source/repos/Yeet/PFD/Views/User/tutorialMenu.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclx0dXRvcmlhbE1lbnUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/table/OneDrive - Ngee Ann Polytechnic/Desktop/Desktop/Ngee Ann Poly/Semester 4/Portfolio Development/Code/PFD/Views/User/UploadCert.cshtml]
+[C:/Users/koayy/source/repos/Yeet/PFD/Views/User/UploadCert.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxVcGxvYWRDZXJ0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/table/OneDrive - Ngee Ann Polytechnic/Desktop/Desktop/Ngee Ann Poly/Semester 4/Portfolio Development/Code/PFD/Views/_ViewImports.cshtml]
+[C:/Users/koayy/source/repos/Yeet/PFD/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/table/OneDrive - Ngee Ann Polytechnic/Desktop/Desktop/Ngee Ann Poly/Semester 4/Portfolio Development/Code/PFD/Views/_ViewStart.cshtml]
+[C:/Users/koayy/source/repos/Yeet/PFD/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/table/OneDrive - Ngee Ann Polytechnic/Desktop/Desktop/Ngee Ann Poly/Semester 4/Portfolio Development/Code/PFD/Views/Shared/_Layout.cshtml]
+[C:/Users/koayy/source/repos/Yeet/PFD/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-rp6zzlltce
